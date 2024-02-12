@@ -153,3 +153,9 @@ yarn dev
 ```
 
 Once the server is running it should automatically open your browser with the chat widget.
+
+## Deploy
+
+- Run ´yarn build`
+- Copy the files from `./packages/react-chat/dist` into the repository `voiceflow-react-chat-deploy`
+- Commit and push in the repository `voiceflow-react-chat-deploy`
