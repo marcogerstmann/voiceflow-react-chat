@@ -101,7 +101,10 @@ const Chat: React.FC<ChatProps> = ({
       </Dialog>
       <Footer withWatermark={withWatermark} hasEnded={hasEnded} onStart={onStart} onSend={onSend} />
       <Overlay />
-      <Prompt accept={{ label: 'End Chat', type: 'warn', onClick: chain(onEnd, handleResume) }} cancel={{ label: 'Cancel', onClick: handleResume }} />
+      <Prompt
+        accept={{ label: 'Chat schließen', type: 'warn', onClick: chain(onEnd, handleResume) }}
+        cancel={{ label: 'Abbrechenn', onClick: handleResume }}
+      />
     </Container>
   );
 };
