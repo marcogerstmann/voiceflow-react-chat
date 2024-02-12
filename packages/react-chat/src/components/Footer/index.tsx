@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ withWatermark, hasEnded, onStart, onSen
       )}
       {withWatermark && (
         <Watermark>
-          Assistant ⚡️ by
+          Entwickelt mit
           <a target="_blank" href="https://voiceflow.com" rel="noreferrer">
             Voiceflow
           </a>

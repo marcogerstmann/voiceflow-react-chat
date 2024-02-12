@@ -96,7 +96,7 @@ const Chat: React.FC<ChatProps> = ({
           <Spacer />
           {!!timestamp && <SessionTime>{timestamp}</SessionTime>}
           {children}
-          {hasEnded && <Status>You have ended the chat</Status>}
+          {hasEnded && <Status>Der Chat wurde beendet</Status>}
         </AutoScrollProvider>
       </Dialog>
       <Footer withWatermark={withWatermark} hasEnded={hasEnded} onStart={onStart} onSend={onSend} />
