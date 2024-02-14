@@ -53,9 +53,9 @@ const Footer: React.FC<FooterProps> = ({ withWatermark, hasEnded, onStart, onSen
       )}
       {withWatermark && (
         <Watermark>
-          Entwickelt mit
-          <a target="_blank" href="https://voiceflow.com" rel="noreferrer">
-            Voiceflow
+          Entwickelt von
+          <a target="_blank" href="https://www.hi-aichat.com" rel="noreferrer">
+            "hi ai"
           </a>
         </Watermark>
       )}
