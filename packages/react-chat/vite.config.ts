@@ -35,6 +35,7 @@ export default defineConfig(({ mode }) => {
       'process.env': '({})',
     },
     build: {
+      outDir: './dist/chat-widget',
       lib: {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         name: 'voiceflow-react-chat',
