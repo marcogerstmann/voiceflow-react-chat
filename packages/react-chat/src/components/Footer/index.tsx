@@ -53,7 +53,7 @@ const Footer: React.FC<FooterProps> = ({ withWatermark, hasEnded, onStart, onSen
       )}
       {withWatermark && (
         <Watermark>
-          Entwickelt von
+          Assistent von
           <a target="_blank" href="https://www.hi-aichat.com" rel="noreferrer">
             "hi ai"
           </a>
