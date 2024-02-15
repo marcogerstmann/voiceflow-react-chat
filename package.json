@@ -36,7 +36,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --force",
     "build:all": "yarn build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
