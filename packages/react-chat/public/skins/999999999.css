@@ -21,7 +21,9 @@
   Note that changes to the assistant information here will be shared across other elements that consume this styling.
 */
 
-/* .vfrc-header {} */
+.vfrc-header {
+  background-color: red;
+}
 
 /* .vfrc-assistant-info {} */
 
