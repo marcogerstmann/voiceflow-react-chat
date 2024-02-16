@@ -19,7 +19,14 @@
 
 /* .voiceflow-chat {} */
 
-/* .vfrc-launcher {} */
+.vfrc-launcher {
+  overflow: hidden;
+}
+
+.vfrc-launcher img {
+  height: 64px;
+  width: 64px;
+}
 
 /* .vfrc-chat--overlay {} */
 
@@ -39,18 +46,17 @@
 /* .vfrc-assistant-info {} */
 
 .vfrc-assistant-info .vfrc-avatar {
-  display: none;
+  width: 128px;
+  height: 128px;
 }
 
 .vfrc-assistant-info--title {
-  height: 64px;
-  background-image: url(https://cdn.hi-aichat.com/chat-widget/999999999/hi-ai-schriftzug.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: var(--text);
 }
 
-/* .vfrc-assistant-info--description {} */
+.vfrc-assistant-info--description {
+  color: var(--text);
+}
 
 /* .vfrc-avatar {} */
 
