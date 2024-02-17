@@ -124,6 +124,10 @@
   font-weight: 400;
 }
 
+.vfrc-button:hover {
+  opacity: 0.8;
+}
+
 /* .vfrc-image {} */
 
 /* .vfrc-image--background {} */
@@ -140,9 +144,6 @@
 
 /* Targeted styling for just the Assistant messages. */
 /* .vfrc-system-response .vfrc-message {} */
-
-/* Targeted styling for just the Assistant buttons. */
-/* .vfrc-system-response .vfrc-button {} */
 
 /*
   USER RESPONSES
