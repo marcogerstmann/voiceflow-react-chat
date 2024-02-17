@@ -153,7 +153,9 @@
 /* .vfrc-user-response {} */
 
 /* Targeted styling for just the User messages */
-/* .vfrc-user-response .vfrc-message {} */
+.vfrc-user-response .vfrc-message {
+  background-color: var(--blue);
+}
 
 /*
   FOOTER
