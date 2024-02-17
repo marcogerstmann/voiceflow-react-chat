@@ -12,6 +12,18 @@
 
   <body>
     <script>
+      // Define constants
+      const baseUrl = "https://cdn.hi-aichat.com/chat-widget";
+      const customer = "999999999";
+      const customerUrl = `${baseUrl}/${customer}`;
+      const voiceflowProjectId = "65cde0ef6ac517aa3fd7197e";
+
+      // Add fonts stylesheet
+      const style = document.createElement("style");
+      style.textContent = `@import url(${customerUrl}/fonts/stylesheet.css);`;
+      document.head.appendChild(style);
+
+      // Insert chat widget
       function _vf_load() {
         window.voiceflow.chat.load({
           url: '<%= VITE_VF_RUNTIME_URL %>',
@@ -21,9 +33,9 @@
             name: 'Development User',
           },
           allowDangerousHTML: false,
-          // assistant: {
-          //   stylesheet: '../public/999999999/styles.css'
-          // }
+          assistant: {
+            stylesheet: `../public/${customer}/styles.css`
+          }
         });
       }
     </script>
