@@ -174,3 +174,9 @@
 .vfrc-footer--watermark {
   color: var(--text-light);
 }
+
+@media (max-width: 768px) {
+  .vfrc-widget--chat {
+    width: 98% !important;
+  }
+}
