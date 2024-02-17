@@ -4,7 +4,17 @@
   --red: #fe2d54;
   --blue: #48b0df;
   --text: #ffffff;
+  --text-light: #e6e6e6;
+  --text-link: var(--yellow);
   --usermessage: #6bccf7;
+}
+
+.vfrc-widget--chat * {
+  font-family: 'Courier Prime';
+}
+
+.vfrc-widget--chat a {
+  color: var(--text-link);
 }
 
 .vfrc-widget--chat {
@@ -56,7 +66,7 @@
 }
 
 .vfrc-assistant-info--description {
-  color: var(--text);
+  color: var(--text-light);
 }
 
 /* .vfrc-avatar {} */
@@ -79,15 +89,21 @@
 
 /* .vfrc-chat--spacer {} */
 
-/* .vfrc-chat--session-time {} */
-
-/* .vfrc-chat--status {} */
-
-.vfrc-message {
-  font-family: 'Courier Prime';
+.vfrc-chat--session-time {
+  color: var(--text-light);
 }
 
-/* .vfrc-timestamp {} */
+.vfrc-chat--status {
+  color: var(--text-light);
+}
+
+.vfrc-message {
+  max-width: 380px !important;
+}
+
+.vfrc-timestamp {
+  color: var(--text-light);
+}
 
 /*
   ASSISTANT RESPONSES
@@ -155,4 +171,6 @@
 
 /* .vfrc-chat-input--button {} */
 
-/* .vfrc-footer--watermark {} */
+.vfrc-footer--watermark {
+  color: var(--text-light);
+}
