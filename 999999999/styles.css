@@ -2,10 +2,10 @@
   --background: #202124;
   --yellow: #fea43f;
   --red: #d92494;
-  --blue: #48b0df;
+  --blue: #1d528e;
   --text: #ffffff;
-  --text-light: #e6e6e6;
-  --text-link: var(--yellow);
+  --text-light: var(--yellow);
+  --text-link: var(--red);
 }
 
 .vfrc-widget--chat * {
@@ -120,6 +120,8 @@
 
 .vfrc-button {
   background-color: var(--blue);
+  color: var(--text);
+  font-weight: 400;
 }
 
 /* .vfrc-image {} */
