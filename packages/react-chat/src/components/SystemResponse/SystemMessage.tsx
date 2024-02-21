@@ -9,6 +9,7 @@ import Image from '@/components/Image';
 import Text from '@/components/Text';
 import Timestamp from '@/components/Timestamp';
 
+import CustomImage from '../CustomImage';
 import Feedback, { FeedbackProps } from '../Feedback';
 import { MessageType } from './constants';
 import EndState from './state/end';
@@ -65,6 +66,7 @@ const SystemMessage: React.FC<SystemMessageProps> = ({ avatar, feedback, timesta
               .with({ type: MessageType.CAROUSEL }, (props) => (
                 <Carousel {...R.omit(props, ['type'])} containerRef={containerRef} controlsRef={controlsRef} />
               ))
+              .with({ type: MessageType.CUSTOM_IMAGE }, ({ payload: { url } }) => <CustomImage url={url} />)
               .otherwise(() => null)}
           {feedback && <Feedback {...feedback} />}
         </List>
