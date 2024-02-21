@@ -1,5 +1,3 @@
-import './react-modal-image-style.css';
-
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Lightbox } from 'react-modal-image';

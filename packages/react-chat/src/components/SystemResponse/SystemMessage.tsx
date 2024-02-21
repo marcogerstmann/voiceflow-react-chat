@@ -10,6 +10,7 @@ import Text from '@/components/Text';
 import Timestamp from '@/components/Timestamp';
 
 import CustomImage from '../CustomImage';
+import CustomPdf from '../CustomPdf';
 import Feedback, { FeedbackProps } from '../Feedback';
 import { MessageType } from './constants';
 import EndState from './state/end';
@@ -67,6 +68,7 @@ const SystemMessage: React.FC<SystemMessageProps> = ({ avatar, feedback, timesta
                 <Carousel {...R.omit(props, ['type'])} containerRef={containerRef} controlsRef={controlsRef} />
               ))
               .with({ type: MessageType.CUSTOM_IMAGE }, ({ payload }) => <CustomImage {...payload} />)
+              .with({ type: MessageType.CUSTOM_PDF }, ({ payload }) => <CustomPdf {...payload} />)
               .otherwise(() => null)}
           {feedback && <Feedback {...feedback} />}
         </List>

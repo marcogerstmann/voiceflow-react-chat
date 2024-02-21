@@ -7,6 +7,7 @@ export enum MessageType {
 
   // Custom message types
   CUSTOM_IMAGE = 'custom_image',
+  CUSTOM_PDF = 'custom_pdf',
 }
 
 export const DEFAULT_MESSAGE_DELAY = 1000;
