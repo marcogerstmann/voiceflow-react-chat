@@ -9,6 +9,7 @@ import { MessageType } from '@/components/SystemResponse/constants';
 import { UserTurnProps } from '@/types';
 
 import { MESSAGE_TRACES, RuntimeMessage } from './messages';
+import { CUSTOM_MESSAGE_TRACES } from './messagesCustom';
 
 export enum FeedbackName {
   POSITIVE = 'Thumbs up',
@@ -32,7 +33,7 @@ export const useRuntimeAPI = ({
       new VoiceflowRuntime<RuntimeMessage>({
         verify,
         url,
-        traces: [...MESSAGE_TRACES, ...traceHandlers],
+        traces: [...MESSAGE_TRACES, ...CUSTOM_MESSAGE_TRACES, ...traceHandlers],
       }),
     []
   );

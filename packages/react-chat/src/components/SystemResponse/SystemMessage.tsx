@@ -66,7 +66,7 @@ const SystemMessage: React.FC<SystemMessageProps> = ({ avatar, feedback, timesta
               .with({ type: MessageType.CAROUSEL }, (props) => (
                 <Carousel {...R.omit(props, ['type'])} containerRef={containerRef} controlsRef={controlsRef} />
               ))
-              .with({ type: MessageType.CUSTOM_IMAGE }, ({ payload: { url } }) => <CustomImage url={url} />)
+              .with({ type: MessageType.CUSTOM_IMAGE }, ({ payload }) => <CustomImage {...payload} />)
               .otherwise(() => null)}
           {feedback && <Feedback {...feedback} />}
         </List>
