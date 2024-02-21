@@ -1,0 +1,2 @@
+import{I as e}from"./index.7935f83f.js";import{j as r}from"./jsx-runtime.17f76c00.js";import"./functional.e245eb8d.js";import"./tag.1ac55f41.js";import"./animation.88686979.js";import"./iframe.a3b92e37.js";const i={title:"Core/Input",component:e,args:{value:"",placeholder:""},parameters:{controls:{include:["value","placeholder","onValueChange"]}}},o=t=>r(e.Controlled,{...t}),u=o.bind({}),a=o.bind({});a.args={placeholder:"Message\u2026"};export{u as Default,a as Placeholder,i as default};
+//# sourceMappingURL=Input.story.55267489.js.map
