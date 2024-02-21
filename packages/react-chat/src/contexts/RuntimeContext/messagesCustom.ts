@@ -15,14 +15,4 @@ export const CUSTOM_MESSAGE_TRACES: TraceDeclaration<RuntimeMessage, any>[] = [
       return context;
     },
   },
-  {
-    canHandle: ({ type }) => type === 'custom_pdf',
-    handle: ({ context }, trace: Trace.AnyTrace) => {
-      context.messages.push({
-        type: MessageType.CUSTOM_PDF,
-        payload: trace.payload,
-      });
-      return context;
-    },
-  },
 ];
