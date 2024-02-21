@@ -25,7 +25,7 @@ const CustomImage: React.FC<CustomImageProps> = ({ url, caption }) => {
 
   return (
     <>
-      {isImageOpen && createPortal(<Lightbox large={url} alt={caption} onClose={closeImage} />, document.body)}
+      {isImageOpen && createPortal(<Lightbox large={url} alt={caption} onClose={closeImage} hideDownload />, document.body)}
       <Image image={url} onClick={openImage} style={imageStyles} />
     </>
   );
