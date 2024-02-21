@@ -51,7 +51,7 @@ export const Container = styled(tag('div'), {
   '-webkit-font-smoothing': 'antialiased',
   '-moz-osx-font-smoothing': 'grayscale',
   pointerEvents: 'none',
-  zIndex: 10000,
+  zIndex: 4999,
 
   [`
     & > ${LauncherContainer},
