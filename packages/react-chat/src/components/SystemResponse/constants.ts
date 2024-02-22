@@ -7,6 +7,7 @@ export enum MessageType {
 
   // Custom message types
   CUSTOM_IMAGE = 'custom_image',
+  CUSTOM_CALENDLY = 'custom_calendly',
 }
 
 export const DEFAULT_MESSAGE_DELAY = 1000;

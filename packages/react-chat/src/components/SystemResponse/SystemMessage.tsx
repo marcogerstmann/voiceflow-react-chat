@@ -9,6 +9,7 @@ import Image from '@/components/Image';
 import Text from '@/components/Text';
 import Timestamp from '@/components/Timestamp';
 
+import CustomCalendly from '../CustomCalendly';
 import CustomImage from '../CustomImage';
 import Feedback, { FeedbackProps } from '../Feedback';
 import { MessageType } from './constants';
@@ -67,6 +68,7 @@ const SystemMessage: React.FC<SystemMessageProps> = ({ avatar, feedback, timesta
                 <Carousel {...R.omit(props, ['type'])} containerRef={containerRef} controlsRef={controlsRef} />
               ))
               .with({ type: MessageType.CUSTOM_IMAGE }, ({ payload }) => <CustomImage {...payload} />)
+              .with({ type: MessageType.CUSTOM_CALENDLY }, ({ payload }) => <CustomCalendly {...payload} />)
               .otherwise(() => null)}
           {feedback && <Feedback {...feedback} />}
         </List>
