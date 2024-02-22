@@ -13,14 +13,14 @@
   <body>
     <script>
       // Define constants
-      const baseUrl = "https://cdn.hi-aichat.com/chat-widget";
-      const customer = "999999999";
-      const customerUrl = `${baseUrl}/${customer}`;
+      const chatbotId = "35bdc802-495e-4fc6-8ca6-fb176c08a777";
       const voiceflowProjectId = "65cde0ef6ac517aa3fd7197e";
+      const baseUrl = "https://cdn.hi-aichat.com/chat-widget";
+      const chatbotUrl = `${baseUrl}/${chatbotId}`;
 
       // Add fonts stylesheet
       const style = document.createElement("style");
-      style.textContent = `@import url(${customerUrl}/fonts/stylesheet.css);`;
+      style.textContent = `@import url(${chatbotUrl}/fonts/stylesheet.css);`;
       document.head.appendChild(style);
 
       // Insert chat widget
@@ -34,7 +34,7 @@
           },
           allowDangerousHTML: false,
           assistant: {
-            stylesheet: `../${customer}/styles.css`
+            stylesheet: `../${chatbotId}/styles.css`
           },
           customConfig: {
               privacyPolicyUrl: "https://www.hi-aichat.com/datenschutzerklaerung/"
