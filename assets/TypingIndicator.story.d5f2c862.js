@@ -1,2 +1,0 @@
-import{T as o}from"./index.7e1fb45b.js";import{j as n}from"./jsx-runtime.1ec4e0b6.js";import"./tag.7fe3d38c.js";import"./animation.34af5e80.js";import"./iframe.38e6f8eb.js";const m={title:"Components/TypingIndicator",component:o,parameters:{controls:{hideNoControlsWarning:!0}}},r=t=>n(o,{...t}),c=r.bind({});export{c as Default,m as default};
-//# sourceMappingURL=TypingIndicator.story.d5f2c862.js.map
