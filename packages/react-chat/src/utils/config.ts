@@ -17,7 +17,7 @@ const tryDecodeURIComponent = (str: string) => {
 
 export const sanitizeConfig = (config: unknown): Partial<ChatConfig> & Pick<ChatConfig, 'verify' | 'url'> => {
   const ref = isObject(config) ? config : {};
-  const { url, user, userID, versionID, verify, assistant, launch, allowDangerousHTML } = ref;
+  const { url, user, userID, versionID, verify, assistant, launch, allowDangerousHTML, customConfig } = ref;
 
   if (!validateVerify(verify)) {
     throw new Error('no projectID on load');
@@ -38,6 +38,7 @@ export const sanitizeConfig = (config: unknown): Partial<ChatConfig> & Pick<Chat
     }),
     ...(isObject(assistant) && ({ assistant } as Partial<Pick<ChatConfig, 'assistant'>>)),
     ...(isObject(launch) && ({ launch } as Pick<ChatConfig, 'launch'>)),
+    ...(isObject(customConfig) && ({ customConfig } as Partial<Pick<ChatConfig, 'customConfig'>>)),
 
     // default to true during migration period, turn off later
     ...(typeof allowDangerousHTML === 'boolean' ? { allowDangerousHTML } : { allowDangerousHTML: true }),

@@ -4,7 +4,7 @@ import { ActionType, PublicVerify, Trace, TraceDeclaration } from '@voiceflow/sd
 import cuid from 'cuid';
 import { useState } from 'react';
 
-import { Assistant, RuntimeOptions, SendMessage, SessionOptions, SessionStatus } from '@/common';
+import { Assistant, CustomConfig, RuntimeOptions, SendMessage, SessionOptions, SessionStatus } from '@/common';
 import { DEFAULT_MESSAGE_DELAY } from '@/components/SystemResponse/constants';
 import type { RuntimeMessage } from '@/contexts/RuntimeContext/messages';
 import { useStateRef } from '@/hooks/useStateRef';
@@ -18,6 +18,7 @@ import { createContext, useRuntimeAPI } from './useRuntimeAPI';
 
 export interface Settings {
   assistant: Assistant;
+  customConfig: CustomConfig;
   config: RuntimeOptions<PublicVerify>;
 }
 
@@ -27,7 +28,7 @@ const DEFAULT_SESSION_PARAMS = {
   status: SessionStatus.IDLE,
 };
 
-export const useRuntimeState = ({ assistant, config }: Settings) => {
+export const useRuntimeState = ({ assistant, config, customConfig }: Settings) => {
   const [isOpen, setOpen] = useState(false);
 
   const [session, setSession, sessionRef] = useStateRef<Required<SessionOptions>>(() => ({
@@ -155,6 +156,7 @@ export const useRuntimeState = ({ assistant, config }: Settings) => {
       // these are meant to be static, so bundling them with the API
       assistant,
       config,
+      customConfig,
     },
   };
 };

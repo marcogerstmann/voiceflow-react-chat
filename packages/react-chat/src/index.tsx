@@ -26,7 +26,7 @@ window.voiceflow.chat ??= {
 
     await new Promise<void>((resolve) => {
       root.render(
-        <RuntimeProvider assistant={assistant} config={config}>
+        <RuntimeProvider assistant={assistant} config={config} customConfig={config.customConfig}>
           <ChatWidget chatAPI={window.voiceflow!.chat} ready={resolve} />
         </RuntimeProvider>
       );

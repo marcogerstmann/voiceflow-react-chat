@@ -42,6 +42,11 @@ export interface SessionOptions {
 
 export type Assistant = Omit<ChatPublishing & Required<Omit<ChatPublishing, 'launcher' | 'stylesheet'>>, 'selectedIntents'>;
 
+export interface CustomConfig {
+  privacyPolicyUrl?: string;
+}
+
 export interface ChatConfig extends RuntimeOptions<PublicVerify> {
   assistant?: Assistant;
+  customConfig?: CustomConfig;
 }

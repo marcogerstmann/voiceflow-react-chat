@@ -9,6 +9,7 @@ import { AutoScrollProvider } from '@/contexts';
 import { Nullish } from '@/types';
 import { chain } from '@/utils/functional';
 
+import CustomLegalInfo from '../CustomLegalInfo';
 import { useTimestamp } from './hooks';
 import { Container, Dialog, Overlay, SessionTime, Spacer, Status } from './styled';
 
@@ -93,6 +94,7 @@ const Chat: React.FC<ChatProps> = ({
       <Dialog ref={dialogRef}>
         <AutoScrollProvider target={dialogRef}>
           <AssistantInfo title={title} avatar={avatar} description={description} />
+          <CustomLegalInfo />
           <Spacer />
           {!!timestamp && <SessionTime>{timestamp}</SessionTime>}
           {children}
