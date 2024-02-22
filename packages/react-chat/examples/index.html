@@ -39,6 +39,19 @@
           customConfig: {
               privacyPolicyUrl: "https://www.hi-aichat.com/datenschutzerklaerung/"
           },
+        }).then(() => {
+          setTimeout(() => {
+            window.voiceflow.chat.proactive.push({
+              type: "text",
+              payload: { message: "Hallo! Ich bin Ava!" },
+            });
+          }, 1000);
+          setTimeout(() => {
+            window.voiceflow.chat.proactive.push({
+              type: "text",
+              payload: { message: "Wie kann ich dir helfen?" },
+            });
+          }, 2000);
         });
       }
     </script>
