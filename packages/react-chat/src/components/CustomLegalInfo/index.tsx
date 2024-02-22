@@ -2,6 +2,8 @@ import { useContext } from 'react';
 
 import { RuntimeStateAPIContext } from '@/contexts';
 
+import { Container, Description } from './styled';
+
 export interface CustomLegalInfoProps {
   privacyPolicyUrl: string;
 }
@@ -9,18 +11,23 @@ export interface CustomLegalInfoProps {
 const CustomLegalInfo: React.FC<CustomLegalInfoProps> = () => {
   const { customConfig } = useContext(RuntimeStateAPIContext);
   return (
-    <p>Die URL: {customConfig.privacyPolicyUrl}</p>
-    // <Container>
-    //   <Avatar size="large" avatar={avatar} />
-    //   <Title>{title}</Title>
-    //   <Description>{description}</Description>
-    // </Container>
+    <>
+      {customConfig.privacyPolicyUrl && (
+        <Container>
+          <Description>
+            Durch die Nutzung dieses Service stimmst du den{' '}
+            <a target="_blank" href={customConfig.privacyPolicyUrl} rel="noreferrer">
+              Datenschutzrichtlinien
+            </a>{' '}
+            zu.
+          </Description>
+        </Container>
+      )}
+    </>
   );
 };
 
-export default CustomLegalInfo;
-// export default Object.assign(AssistantInfo, {
-//   Container,
-//   Title,
-//   Description,
-// });
+export default Object.assign(CustomLegalInfo, {
+  Container,
+  Description,
+});

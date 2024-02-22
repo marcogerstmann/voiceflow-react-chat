@@ -32,3 +32,7 @@ export enum ClassName {
   PROACTIVE_MESSAGE = 'vfrc-proactive-message',
   PROACTIVE = 'vfrc-proactive',
 }
+
+export enum CustomClassName {
+  LEGAL_INFO = 'hiai-legal-info',
+}

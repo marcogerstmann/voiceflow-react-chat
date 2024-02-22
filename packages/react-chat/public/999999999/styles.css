@@ -8,12 +8,6 @@
   --text-link: var(--red);
 }
 
-iframe.calendly-embed {
-  width: 424px;
-  height: 540px;
-  border: 3px solid var(--blue);
-}
-
 .vfrc-widget--chat * {
   font-family: 'Courier Prime';
 }
@@ -24,16 +18,8 @@ iframe.calendly-embed {
 
 .vfrc-widget--chat {
   width: 640px;
-  border: 2px solid var(--red);
+  border: 2px solid var(--blue);
 }
-
-/*
-  PAGE CONTENTS
-
-  Customize the page that the chat bubble lives on
-*/
-
-/* .voiceflow-chat {} */
 
 .vfrc-launcher {
   overflow: hidden;
@@ -43,21 +29,6 @@ iframe.calendly-embed {
   height: 64px;
   width: 64px;
 }
-
-/* .vfrc-chat--overlay {} */
-
-/* .vfrc-prompt {} */
-
-/*
-  CHAT WIDGET HEADER
-
-  Customize the content, controls and styling included in your chat widget header, including the Assistant Information.
-  Note that changes to the assistant information here will be shared across other elements that consume this styling.
-*/
-
-/* .vfrc-header {} */
-
-/* .vfrc-assistant-info {} */
 
 .vfrc-assistant-info .vfrc-avatar {
   width: 128px;
@@ -72,16 +43,6 @@ iframe.calendly-embed {
   color: var(--text-light);
 }
 
-/* .vfrc-avatar {} */
-
-/* .vfrc-icon {} */
-
-/*
-  CHAT MESSAGE BODY
-
-  Customize the layout and display of the chat body, and the conversation's metadata
-*/
-
 .vfrc-chat {
   background-color: var(--background);
 }
@@ -89,8 +50,6 @@ iframe.calendly-embed {
 .vfrc-chat--dialog {
   overflow: hidden auto;
 }
-
-/* .vfrc-chat--spacer {} */
 
 .vfrc-chat--session-time {
   color: var(--text-light);
@@ -108,22 +67,6 @@ iframe.calendly-embed {
   color: var(--text-light);
 }
 
-/*
-  ASSISTANT RESPONSES
-
-  Customize the style and layout of assistant response messages.
-*/
-
-/* .vfrc-system-response--indicator {} */
-
-/* .vfrc-system-response {} */
-
-/* .vfrc-system-response--controls {} */
-
-/* .vfrc-system-response--list {} */
-
-/* .vfrc-system-response--actions {} */
-
 .vfrc-button {
   background-color: var(--blue);
   color: var(--text);
@@ -134,50 +77,29 @@ iframe.calendly-embed {
   opacity: 0.8;
 }
 
-/* .vfrc-image {} */
-
-/* .vfrc-image--background {} */
-
-/* .vfrc-card--content {} */
-
-/* .vfrc-card--header {} */
-
-/* .vfrc-card--description {} */
-
-/* .vfrc-carousel {} */
-
-/* .vfrc-carousel--button {} */
-
-/* Targeted styling for just the Assistant messages. */
-/* .vfrc-system-response .vfrc-message {} */
-
-/*
-  USER RESPONSES
-
-  Customize the style and layout of users response messages.
-*/
-
-/* .vfrc-user-response {} */
-
-/* Targeted styling for just the User messages */
 .vfrc-user-response .vfrc-message {
   background-color: var(--blue);
 }
 
-/*
-  FOOTER
-
-  Customize the layout and appearance of the message input field and the VF Branding
-*/
-
-/* .vf-footer {} */
-
-/* .vfrc-input {} */
-
-/* .vfrc-chat-input--button {} */
-
 .vfrc-footer--watermark {
   color: var(--text-light);
+}
+
+.hiai-legal-info {
+  padding: 12px 48px;
+  background-color: #307696;
+  color: black;
+}
+
+.hiai-legal-info--description,
+.hiai-legal-info--description a {
+  color: black;
+}
+
+iframe.calendly-embed {
+  width: 424px;
+  height: 540px;
+  border: 3px solid var(--blue);
 }
 
 @media (max-width: 768px) {
