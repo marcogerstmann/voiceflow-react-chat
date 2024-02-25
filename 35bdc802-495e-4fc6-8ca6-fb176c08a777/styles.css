@@ -3,6 +3,7 @@
   --yellow: #fea43f;
   --red: #d92494;
   --blue: #1d528e;
+  --lightblue: #307696;
   --text: #ffffff;
   --text-light: var(--yellow);
   --text-link: var(--red);
@@ -73,7 +74,7 @@
 }
 
 .vfrc-button {
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   color: var(--text);
   font-weight: 400;
 }
@@ -92,7 +93,7 @@
 
 .hiai-legal-info {
   padding: 12px 48px;
-  background-color: #307696;
+  background-color: var(--lightblue);
   color: black;
 }
 
