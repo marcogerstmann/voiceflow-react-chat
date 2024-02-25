@@ -12,8 +12,9 @@ const CustomLegalInfo: React.FC<CustomLegalInfoProps> = () => {
   const { customConfig } = useContext(RuntimeStateAPIContext);
   return (
     <>
-      {customConfig.privacyPolicyUrl && (
-        <Container>
+      <Container>
+        <Description>Der Chatbot kann Fehler machen.</Description>
+        {customConfig.privacyPolicyUrl && (
           <Description>
             Durch die Nutzung dieses Service stimmst du den{' '}
             <a target="_blank" href={customConfig.privacyPolicyUrl} rel="noreferrer">
@@ -21,8 +22,9 @@ const CustomLegalInfo: React.FC<CustomLegalInfoProps> = () => {
             </a>{' '}
             zu.
           </Description>
-        </Container>
-      )}
+        )}
+      </Container>
+      )
     </>
   );
 };
