@@ -65,10 +65,6 @@
   color: var(--text-light);
 }
 
-.vfrc-message {
-  max-width: 424px !important;
-}
-
 .vfrc-timestamp {
   color: var(--text-light);
 }
@@ -103,9 +99,20 @@
 }
 
 iframe.calendly-embed {
-  width: 424px;
-  height: 540px;
+  width: 100%;
+  height: 500px;
   border: 3px solid var(--blue);
+}
+
+@media (min-width: 769px) {
+  .vfrc-message {
+    max-width: 424px !important;
+  }
+
+  .vfrc-widget--launcher {
+    bottom: 24px !important;
+    right: 96px !important;
+  }
 }
 
 @media (max-width: 768px) {
