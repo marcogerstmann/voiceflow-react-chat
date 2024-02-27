@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { useCookies } from 'react-cookie';
 
 import Avatar from '@/components/Avatar';
 import Icon, { IconProps } from '@/components/Icon';
@@ -39,7 +40,9 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, image, actions = [] }) => {
   const { customConfig } = useContext(RuntimeStateAPIContext);
-  console.log('the wordpress test cookie', localStorage.getItem(customConfig.testCookieName as string));
+  console.log('the wordpress test local storage item', localStorage.getItem(customConfig.testCookieName as string));
+  const [cookie, setCookie] = useCookies([customConfig.testCookieName as string]);
+  console.log('the wordpress test cookie', cookie);
   return (
     <Container>
       <Avatar avatar={image} />
