@@ -1,9 +1,5 @@
-import { useContext } from 'react';
-import { useCookies } from 'react-cookie';
-
 import Avatar from '@/components/Avatar';
 import Icon, { IconProps } from '@/components/Icon';
-import { RuntimeStateAPIContext } from '@/contexts';
 
 import { Button, Container, Title } from './styled';
 
@@ -38,23 +34,17 @@ export interface HeaderProps {
   actions?: HeaderActionProps[];
 }
 
-const Header: React.FC<HeaderProps> = ({ title, image, actions = [] }) => {
-  const { customConfig } = useContext(RuntimeStateAPIContext);
-  console.log('the wordpress test local storage item', localStorage.getItem(customConfig.testCookieName as string));
-  const [cookie, setCookie] = useCookies([customConfig.testCookieName as string]);
-  console.log('the wordpress test cookie', cookie);
-  return (
-    <Container>
-      <Avatar avatar={image} />
-      <Title>{title}</Title>
-      {actions.map(({ svg, onClick }, index) => (
-        <Button onClick={onClick} key={index}>
-          <Icon svg={svg} />
-        </Button>
-      ))}
-    </Container>
-  );
-};
+const Header: React.FC<HeaderProps> = ({ title, image, actions = [] }) => (
+  <Container>
+    <Avatar avatar={image} />
+    <Title>{title}</Title>
+    {actions.map(({ svg, onClick }, index) => (
+      <Button onClick={onClick} key={index}>
+        <Icon svg={svg} />
+      </Button>
+    ))}
+  </Container>
+);
 
 /**
  * Header for the chat widget with image, title and controls.

@@ -44,7 +44,6 @@ export type Assistant = Omit<ChatPublishing & Required<Omit<ChatPublishing, 'lau
 
 export interface CustomConfig {
   privacyPolicyUrl?: string;
-  testCookieName?: string;
 }
 
 export interface ChatConfig extends RuntimeOptions<PublicVerify> {
